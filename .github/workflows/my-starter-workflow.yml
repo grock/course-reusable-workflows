@@ -20,7 +20,8 @@ jobs:
     strategy:
       matrix:
         nodeversion: [14, 16, 18, 20]
+        os: [ubuntu-latest, windows-latest]
     uses: ./.github/workflows/reusable-workflow.yml
     with:
-      nodes: ${{ matrix.nodeversion }}
+      node: ${{ matrix.nodeversion }}
           
